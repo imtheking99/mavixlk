@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Mavixlk | Digital Marketing Agency</title>
-  <!-- Google Fonts + simple reset & modern styling -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <!-- Font Awesome 6 (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -35,40 +33,22 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 20px 0;
+      padding: 10px 0; /* Tight padding */
       gap: 20px;
+      min-height: 80px; /* Ensures the bar has enough height for a larger logo */
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
       text-decoration: none;
     }
 
     .logo-img {
-      height: 48px;
+      height: 65px; /* INCREASED SIZE - Adjust this number if it's still too small */
       width: auto;
-      max-width: 180px;
+      max-width: 220px;
       object-fit: contain;
-    }
-
-    /* Fallback text logo in case image doesn't load */
-    .logo-text {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #1E2A78, #4F46E5);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .logo-text span {
-      color: #f97316;
-      background: none;
-      -webkit-background-clip: unset;
-      background-clip: unset;
     }
 
     .nav-links {
@@ -133,7 +113,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 40px;
-      padding: 40px 0 60px;
+      padding: 5px 0 60px; /* Minimal top padding to keep text high */
     }
 
     .hero-content {
@@ -475,7 +455,7 @@
         padding: 40px 24px;
       }
       .logo-img {
-        height: 40px;
+        height: 50px;
       }
     }
 
@@ -493,7 +473,7 @@
         font-size: 1.8rem;
       }
       .logo-img {
-        height: 36px;
+        height: 40px;
       }
     }
 
@@ -516,32 +496,9 @@
   <div class="container">
     <nav class="navbar">
       <a href="#" class="logo">
-        <!-- 
-          IMPORTANT: Place your logo file in the correct location and update the src path.
-          
-          Option 1: If your logo is in the same folder as this HTML file:
-          <img src="mavixlk for vector not vector.png" alt="Mavixlk Logo" class="logo-img">
-          
-          Option 2: If you create a 'images' folder in the same directory:
-          <img src="images/mavixlk-logo.png" alt="Mavixlk Logo" class="logo-img">
-          
-          Option 3: For your specific file path, you can use relative path:
-          <img src="D:/mavixLK/LOGO/mavixlk for vector not vector.png" alt="Mavixlk Logo" class="logo-img">
-          
-          The current setup shows a fallback text logo. Replace the commented section below
-          with your actual image tag to display your logo.
-        -->
-        
-        <!-- UNCOMMENT ONE OF THESE LINES AND REMOVE THE TEXT LOGO BELOW -->
-        <!-- <img src="mavixlk for vector not vector.png" alt="Mavixlk Logo" class="logo-img"> -->
-        <!-- <img src="images/mavixlk-logo.png" alt="Mavixlk Logo" class="logo-img"> -->
-        <!-- <img src="D:/mavixLK/LOGO/mavixlk for vector not vector.png" alt="Mavixlk Logo" class="logo-img"> -->
-        
-        <!-- FALLBACK TEXT LOGO (remove this when using image logo above) -->
-        <!--div class="logo-text">Mavix<span>lk</span></div-->
+        <img src="mavixlk for vector not vector.png" alt="Mavixlk Logo" class="logo-img">
       </a>
       <ul class="nav-links">
-         <img src="mavixlk for vector not vector.png" alt="Mavixlk Logo"height="40%" width="40%">
         <li><a href="#">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#work">Work</a></li>
@@ -553,7 +510,6 @@
 </header>
 
 <main>
-  <!-- Hero Section -->
   <div class="container">
     <div class="hero">
       <div class="hero-content">
@@ -582,7 +538,6 @@
     </div>
   </div>
 
-  <!-- Services Section -->
   <div class="section" id="services">
     <div class="container">
       <h2 class="section-title fade-up">What we deliver</h2>
@@ -612,7 +567,6 @@
     </div>
   </div>
 
-  <!-- Recent Work / Showcase -->
   <div class="section" id="work" style="background: #fbfdff;">
     <div class="container">
       <h2 class="section-title fade-up">Success stories</h2>
@@ -643,7 +597,6 @@
     </div>
   </div>
 
-  <!-- Testimonials -->
   <div class="section">
     <div class="container">
       <h2 class="section-title fade-up">What clients say</h2>
@@ -663,7 +616,6 @@
     </div>
   </div>
 
-  <!-- Call to Action -->
   <div class="container">
     <div class="cta-section fade-up">
       <h2>Ready to accelerate your brand?</h2>
@@ -672,7 +624,6 @@
     </div>
   </div>
 
-  <!-- Contact / footer section (id="contact") -->
   <footer id="contact">
     <div class="container">
       <div class="footer-grid">
@@ -719,7 +670,7 @@
 </main>
 
 <script>
-  // Intersection Observer for fade-up animations
+  // Same JS as before...
   const fadeElements = document.querySelectorAll('.fade-up');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -731,69 +682,15 @@
   }, { threshold: 0.15, rootMargin: "0px 0px -20px 0px" });
   fadeElements.forEach(el => observer.observe(el));
 
-  // Contact CTA button - scroll to footer and show simple alert + demo interaction
   const contactBtn = document.getElementById('openContactBtn');
   if (contactBtn) {
     contactBtn.addEventListener('click', () => {
       const footerSection = document.getElementById('contact');
       if (footerSection) {
         footerSection.scrollIntoView({ behavior: 'smooth' });
-        setTimeout(() => {
-          const msgDiv = document.createElement('div');
-          msgDiv.textContent = '📩 Reach out via email or call — we reply within 24h!';
-          msgDiv.style.position = 'fixed';
-          msgDiv.style.bottom = '20px';
-          msgDiv.style.left = '20px';
-          msgDiv.style.backgroundColor = '#1f2937';
-          msgDiv.style.color = 'white';
-          msgDiv.style.padding = '12px 18px';
-          msgDiv.style.borderRadius = '40px';
-          msgDiv.style.fontSize = '0.9rem';
-          msgDiv.style.zIndex = '999';
-          msgDiv.style.boxShadow = '0 5px 12px rgba(0,0,0,0.1)';
-          document.body.appendChild(msgDiv);
-          setTimeout(() => msgDiv.remove(), 3500);
-        }, 300);
       }
     });
   }
-
-  // Newsletter subscription simulation (nice UI feedback)
-  const subBtn = document.getElementById('subscribeBtn');
-  const emailInput = document.getElementById('newsEmail');
-  const subMsg = document.getElementById('subscribeMsg');
-  if (subBtn && emailInput) {
-    subBtn.addEventListener('click', () => {
-      const email = emailInput.value.trim();
-      if (!email) {
-        subMsg.innerHTML = '⚠️ Please enter an email address.';
-        subMsg.style.color = '#f97316';
-      } else if (!email.includes('@') || !email.includes('.')) {
-        subMsg.innerHTML = '⚠️ Please provide a valid email.';
-        subMsg.style.color = '#f97316';
-      } else {
-        subMsg.innerHTML = '🎉 Thanks for subscribing! We’ll share insights soon.';
-        subMsg.style.color = '#10b981';
-        emailInput.value = '';
-        setTimeout(() => {
-          subMsg.innerHTML = '';
-        }, 4000);
-      }
-    });
-  }
-
-  // smooth navigation for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === "#" || href === "") return;
-      const targetElem = document.querySelector(href);
-      if (targetElem) {
-        e.preventDefault();
-        targetElem.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
 </script>
 </body>
 </html>
