@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<?php include('navigation.php'); ?>
+<!--img src="mavixlk.png" alt="Mavixlk Logo" class="logo-img" height="10%" width="10%"-->
+<?php include('navbar.php'); ?>
 
 <main>
   <?php include('hero.php'); ?>
-  <?php include('services.php'); ?>
+  <?php include('serv.php'); ?>
   <?php include('work.php'); ?>
   <?php include('testimonials.php'); ?>
   <?php include('cta.php'); ?>
